@@ -1,2 +1,3 @@
-# primitive-v2-amm
+# primitive-amm
+
 Derivative focused AMM for the Primitive Protocol.

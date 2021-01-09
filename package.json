@@ -1,9 +1,20 @@
 {
-  "name": "@primitivefi/v2-amm",
+  "name": "@primitivefi/v1-amm",
   "version": "0.0.1",
   "description": "A derivative focused AMM for Primitive.",
+  "engines": {
+    "node": ">=10"
+  },
   "main": "index.js",
-  "repository": "https://github.com/primitivefinance/primitive-v2-amm.git",
+  "files": [
+    "build",
+    "contracts",
+    "deployments"
+  ],
+  "scripts": {
+    "test": "cross-env hardhat test"
+  },
+  "repository": "https://github.com/primitivefinance/primitive-amm.git",
   "author": "Primitive",
   "license": "MIT",
   "private": true,
