@@ -38,5 +38,8 @@
     "rimraf": "^3.0.2",
     "solc": "^0.8.0",
     "solidity-coverage": "^0.7.13"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^3.4.0"
   }
 }
