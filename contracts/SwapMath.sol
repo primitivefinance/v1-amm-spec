@@ -26,9 +26,12 @@ pragma solidity ^0.7.1;
  * @author  Primitive
  */
 
+// Open Zeppelin & ABDK
+import {SafeMath} from "@openzeppelin/contracts/math/SafeMath.sol";
+import {SafeCast} from "@openzeppelin/contracts/utils/SafeCast.sol";
 import {ABDKMath64x64} from "./libraries/ABDKMath64x64.sol";
-import {SafeMath} from "./libraries/SafeMath.sol";
-import {SafeCast} from "./libraries/SafeCast.sol";
+
+// Primitive
 import {Math} from "./libraries/Math.sol";
 import {SwapConstants} from "./SwapConstants.sol";
 
@@ -111,6 +114,7 @@ library SwapMath {
         uint256 shortBalance,
         uint256 underlyingBalance
     ) internal pure returns (uint256) {
+        if (shortBalance == 0 && underlyingBalance == 0) return 0;
         uint256 shortProportion =
             shortBalance.mul(1e18).div(shortBalance.add(underlyingBalance));
         return calculateRate(anchor, shortProportion, scalar);

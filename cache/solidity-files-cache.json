@@ -43,58 +43,10 @@
         "IERC20"
       ]
     },
-    "C:\\Users\\alexa\\OneDrive\\Documents\\Master\\Blockchain\\primitive-amm\\contracts\\PrimitiveAmm.sol": {
-      "lastModificationDate": 1614461784129,
-      "contentHash": "064c36135a257a672e2cbca596d68fad",
-      "sourceName": "contracts/PrimitiveAmm.sol",
-      "solcConfig": {
-        "version": "0.7.1",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [
-        "./libraries/SafeMath.sol",
-        "./interfaces/IERC20.sol",
-        "./PrimitiveERC20.sol",
-        "./SwapMath.sol",
-        "hardhat/console.sol"
-      ],
-      "versionPragmas": [
-        "^0.7.1"
-      ],
-      "artifacts": [
-        "PrimitiveAmm"
-      ]
-    },
-    "C:\\Users\\alexa\\OneDrive\\Documents\\Master\\Blockchain\\primitive-amm\\contracts\\libraries\\ABDKMath64x64.sol": {
-      "lastModificationDate": 1610055288722,
-      "contentHash": "aa5cd554338b3605670e560efdf8f9eb",
-      "sourceName": "contracts/libraries/ABDKMath64x64.sol",
+    "C:\\Users\\alexa\\OneDrive\\Documents\\Master\\Blockchain\\primitive-amm\\contracts\\interfaces\\IPrimitiveERC20.sol": {
+      "lastModificationDate": 1610157703705,
+      "contentHash": "c4ca8bcce8ded95327aa7a928fd64503",
+      "sourceName": "contracts/interfaces/IPrimitiveERC20.sol",
       "solcConfig": {
         "version": "0.7.1",
         "settings": {
@@ -127,94 +79,10 @@
       },
       "imports": [],
       "versionPragmas": [
-        "^0.5.0 || ^0.6.0 || ^0.7.0"
+        ">=0.7.0"
       ],
       "artifacts": [
-        "ABDKMath64x64"
-      ]
-    },
-    "C:\\Users\\alexa\\OneDrive\\Documents\\Master\\Blockchain\\primitive-amm\\contracts\\libraries\\SafeMath.sol": {
-      "lastModificationDate": 1610051003941,
-      "contentHash": "e2bfc4635f391f6e988c05fe90064cd7",
-      "sourceName": "contracts/libraries/SafeMath.sol",
-      "solcConfig": {
-        "version": "0.7.1",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        ">=0.6.0 <0.8.0"
-      ],
-      "artifacts": [
-        "SafeMath"
-      ]
-    },
-    "C:\\Users\\alexa\\OneDrive\\Documents\\Master\\Blockchain\\primitive-amm\\contracts\\libraries\\SafeCast.sol": {
-      "lastModificationDate": 1610056960943,
-      "contentHash": "0f4ab828f64771e8688da4ca5fcb087a",
-      "sourceName": "contracts/libraries/SafeCast.sol",
-      "solcConfig": {
-        "version": "0.7.1",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        ">=0.6.0 <0.8.0"
-      ],
-      "artifacts": [
-        "SafeCast"
+        "IPrimitiveERC20"
       ]
     },
     "C:\\Users\\alexa\\OneDrive\\Documents\\Master\\Blockchain\\primitive-amm\\contracts\\PrimitiveERC20.sol": {
@@ -262,10 +130,10 @@
         "PrimitiveERC20"
       ]
     },
-    "C:\\Users\\alexa\\OneDrive\\Documents\\Master\\Blockchain\\primitive-amm\\contracts\\libraries\\Math.sol": {
-      "lastModificationDate": 1610172265942,
-      "contentHash": "b54a74911496743b0e78df9ba5aebfb5",
-      "sourceName": "contracts/libraries/Math.sol",
+    "C:\\Users\\alexa\\OneDrive\\Documents\\Master\\Blockchain\\primitive-amm\\contracts\\libraries\\SafeMath.sol": {
+      "lastModificationDate": 1610051003941,
+      "contentHash": "e2bfc4635f391f6e988c05fe90064cd7",
+      "sourceName": "contracts/libraries/SafeMath.sol",
       "solcConfig": {
         "version": "0.7.1",
         "settings": {
@@ -298,94 +166,10 @@
       },
       "imports": [],
       "versionPragmas": [
-        ">=0.5.16"
+        ">=0.6.0 <0.8.0"
       ],
       "artifacts": [
-        "Math"
-      ]
-    },
-    "C:\\Users\\alexa\\OneDrive\\Documents\\Master\\Blockchain\\primitive-amm\\node_modules\\hardhat\\console.sol": {
-      "lastModificationDate": 1610050231427,
-      "contentHash": "cc4777addd464ea56fa35b1c45df0591",
-      "sourceName": "hardhat/console.sol",
-      "solcConfig": {
-        "version": "0.7.1",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        ">=0.4.22 <0.9.0"
-      ],
-      "artifacts": [
-        "console"
-      ]
-    },
-    "C:\\Users\\alexa\\OneDrive\\Documents\\Master\\Blockchain\\primitive-amm\\contracts\\interfaces\\IPrimitiveERC20.sol": {
-      "lastModificationDate": 1610157703705,
-      "contentHash": "c4ca8bcce8ded95327aa7a928fd64503",
-      "sourceName": "contracts/interfaces/IPrimitiveERC20.sol",
-      "solcConfig": {
-        "version": "0.7.1",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        ">=0.7.0"
-      ],
-      "artifacts": [
-        "IPrimitiveERC20"
+        "SafeMath"
       ]
     },
     "C:\\Users\\alexa\\OneDrive\\Documents\\Master\\Blockchain\\primitive-amm\\contracts\\test\\ERC20.sol": {
@@ -433,8 +217,8 @@
       ]
     },
     "C:\\Users\\alexa\\OneDrive\\Documents\\Master\\Blockchain\\primitive-amm\\contracts\\SwapMath.sol": {
-      "lastModificationDate": 1614462095325,
-      "contentHash": "2eb6b5a1db9818febf56e7cf7e3b56eb",
+      "lastModificationDate": 1614531091946,
+      "contentHash": "b30f87c427e545a5e2ed1aa4fbb94d8d",
       "sourceName": "contracts/SwapMath.sol",
       "solcConfig": {
         "version": "0.7.1",
@@ -467,9 +251,9 @@
         }
       },
       "imports": [
+        "@openzeppelin/contracts/math/SafeMath.sol",
+        "@openzeppelin/contracts/utils/SafeCast.sol",
         "./libraries/ABDKMath64x64.sol",
-        "./libraries/SafeMath.sol",
-        "./libraries/SafeCast.sol",
         "./libraries/Math.sol",
         "./SwapConstants.sol"
       ],
@@ -478,6 +262,132 @@
       ],
       "artifacts": [
         "SwapMath"
+      ]
+    },
+    "C:\\Users\\alexa\\OneDrive\\Documents\\Master\\Blockchain\\primitive-amm\\contracts\\libraries\\ABDKMath64x64.sol": {
+      "lastModificationDate": 1610055288722,
+      "contentHash": "aa5cd554338b3605670e560efdf8f9eb",
+      "sourceName": "contracts/libraries/ABDKMath64x64.sol",
+      "solcConfig": {
+        "version": "0.7.1",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.5.0 || ^0.6.0 || ^0.7.0"
+      ],
+      "artifacts": [
+        "ABDKMath64x64"
+      ]
+    },
+    "C:\\Users\\alexa\\OneDrive\\Documents\\Master\\Blockchain\\primitive-amm\\contracts\\libraries\\SafeCast.sol": {
+      "lastModificationDate": 1610056960943,
+      "contentHash": "0f4ab828f64771e8688da4ca5fcb087a",
+      "sourceName": "contracts/libraries/SafeCast.sol",
+      "solcConfig": {
+        "version": "0.7.1",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "SafeCast"
+      ]
+    },
+    "C:\\Users\\alexa\\OneDrive\\Documents\\Master\\Blockchain\\primitive-amm\\contracts\\libraries\\Math.sol": {
+      "lastModificationDate": 1610172265942,
+      "contentHash": "b54a74911496743b0e78df9ba5aebfb5",
+      "sourceName": "contracts/libraries/Math.sol",
+      "solcConfig": {
+        "version": "0.7.1",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.16"
+      ],
+      "artifacts": [
+        "Math"
       ]
     },
     "C:\\Users\\alexa\\OneDrive\\Documents\\Master\\Blockchain\\primitive-amm\\contracts\\SwapConstants.sol": {
@@ -520,6 +430,397 @@
       ],
       "artifacts": [
         "SwapConstants"
+      ]
+    },
+    "C:\\Users\\alexa\\OneDrive\\Documents\\Master\\Blockchain\\primitive-amm\\contracts\\PrimitiveAmm.sol": {
+      "lastModificationDate": 1614531170346,
+      "contentHash": "8a95f13784048629f51e9107776341dc",
+      "sourceName": "contracts/PrimitiveAmm.sol",
+      "solcConfig": {
+        "version": "0.7.1",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/utils/Context.sol",
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "@openzeppelin/contracts/token/ERC20/SafeERC20.sol",
+        "@openzeppelin/contracts/math/SafeMath.sol",
+        "@openzeppelin/contracts/utils/ReentrancyGuard.sol",
+        "./PrimitiveERC20.sol",
+        "./SwapMath.sol",
+        "hardhat/console.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.1"
+      ],
+      "artifacts": [
+        "PrimitiveAmm"
+      ]
+    },
+    "C:\\Users\\alexa\\OneDrive\\Documents\\Master\\Blockchain\\primitive-amm\\node_modules\\@openzeppelin\\contracts\\token\\ERC20\\IERC20.sol": {
+      "lastModificationDate": 1612806491506,
+      "contentHash": "e0a41531d159d3a32f84b7a3ecf9fabb",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+      "solcConfig": {
+        "version": "0.7.1",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "IERC20"
+      ]
+    },
+    "C:\\Users\\alexa\\OneDrive\\Documents\\Master\\Blockchain\\primitive-amm\\node_modules\\@openzeppelin\\contracts\\token\\ERC20\\SafeERC20.sol": {
+      "lastModificationDate": 1612806491535,
+      "contentHash": "33e22842646d746e5c4124c2fdc051aa",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/SafeERC20.sol",
+      "solcConfig": {
+        "version": "0.7.1",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./IERC20.sol",
+        "../../math/SafeMath.sol",
+        "../../utils/Address.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "SafeERC20"
+      ]
+    },
+    "C:\\Users\\alexa\\OneDrive\\Documents\\Master\\Blockchain\\primitive-amm\\node_modules\\@openzeppelin\\contracts\\math\\SafeMath.sol": {
+      "lastModificationDate": 1612806491536,
+      "contentHash": "e03e12206057e809eb76c5f681170c32",
+      "sourceName": "@openzeppelin/contracts/math/SafeMath.sol",
+      "solcConfig": {
+        "version": "0.7.1",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "SafeMath"
+      ]
+    },
+    "C:\\Users\\alexa\\OneDrive\\Documents\\Master\\Blockchain\\primitive-amm\\node_modules\\@openzeppelin\\contracts\\utils\\ReentrancyGuard.sol": {
+      "lastModificationDate": 1612806491532,
+      "contentHash": "1c60f58cee45c61469e1aea31e4dd879",
+      "sourceName": "@openzeppelin/contracts/utils/ReentrancyGuard.sol",
+      "solcConfig": {
+        "version": "0.7.1",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "ReentrancyGuard"
+      ]
+    },
+    "C:\\Users\\alexa\\OneDrive\\Documents\\Master\\Blockchain\\primitive-amm\\node_modules\\hardhat\\console.sol": {
+      "lastModificationDate": 1610050231427,
+      "contentHash": "cc4777addd464ea56fa35b1c45df0591",
+      "sourceName": "hardhat/console.sol",
+      "solcConfig": {
+        "version": "0.7.1",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.4.22 <0.9.0"
+      ],
+      "artifacts": [
+        "console"
+      ]
+    },
+    "C:\\Users\\alexa\\OneDrive\\Documents\\Master\\Blockchain\\primitive-amm\\node_modules\\@openzeppelin\\contracts\\utils\\Address.sol": {
+      "lastModificationDate": 1612806491453,
+      "contentHash": "7aa46886ff5abe7515496208a5e2ce5a",
+      "sourceName": "@openzeppelin/contracts/utils/Address.sol",
+      "solcConfig": {
+        "version": "0.7.1",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.2 <0.8.0"
+      ],
+      "artifacts": [
+        "Address"
+      ]
+    },
+    "C:\\Users\\alexa\\OneDrive\\Documents\\Master\\Blockchain\\primitive-amm\\node_modules\\@openzeppelin\\contracts\\utils\\Context.sol": {
+      "lastModificationDate": 1612806491460,
+      "contentHash": "2adbd82f6d055a4751566d4671512b03",
+      "sourceName": "@openzeppelin/contracts/utils/Context.sol",
+      "solcConfig": {
+        "version": "0.7.1",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "Context"
+      ]
+    },
+    "C:\\Users\\alexa\\OneDrive\\Documents\\Master\\Blockchain\\primitive-amm\\node_modules\\@openzeppelin\\contracts\\utils\\SafeCast.sol": {
+      "lastModificationDate": 1612806491534,
+      "contentHash": "c227dcf457382aabf2d78218f6457799",
+      "sourceName": "@openzeppelin/contracts/utils/SafeCast.sol",
+      "solcConfig": {
+        "version": "0.7.1",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "SafeCast"
       ]
     }
   }

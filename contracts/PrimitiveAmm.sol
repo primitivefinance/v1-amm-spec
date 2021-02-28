@@ -6,6 +6,7 @@ pragma solidity ^0.7.1;
  */
 
 // Open Zeppelin
+import {Context} from "@openzeppelin/contracts/utils/Context.sol";
 import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import {SafeERC20} from "@openzeppelin/contracts/token/ERC20/SafeERC20.sol";
 import {SafeMath} from "@openzeppelin/contracts/math/SafeMath.sol";
@@ -18,7 +19,7 @@ import {SwapMath} from "./SwapMath.sol";
 
 import "hardhat/console.sol";
 
-contract PrimitiveAmm is PrimitiveERC20, ReentrancyGuard {
+contract PrimitiveAmm is PrimitiveERC20, ReentrancyGuard, Context {
     using SafeMath for uint256;
     using SafeERC20 for IERC20;
 
@@ -101,12 +102,19 @@ contract PrimitiveAmm is PrimitiveERC20, ReentrancyGuard {
         );
     }
 
+    uint256 internal _rate;
+
+    function _updateRate() internal {
+        _rate = getSpotExchangeRate();
+    }
+
     // optimistic pro-rata liquidity token implementation
     function mint(address receiver)
         external
         nonReentrant
         returns (uint256 liquidity)
     {
+        // Gas savings
         (uint256 shortCache_, uint256 underlyingCache_) = getCaches();
         uint256 shortBalance = IERC20(shortToken).balanceOf(address(this));
         uint256 underlyingBalance =
@@ -119,6 +127,7 @@ contract PrimitiveAmm is PrimitiveERC20, ReentrancyGuard {
                 SwapMath.minLiquidity()
             );
             _mint(address(0), SwapMath.minLiquidity()); // prevent monopolization of pool
+            _updateRate(); // store rate in cache
         } else {
             liquidity = SwapMath.min(
                 shortAmount.mul(_totalSupply) / shortCache_,
@@ -126,10 +135,10 @@ contract PrimitiveAmm is PrimitiveERC20, ReentrancyGuard {
             );
         }
         require(liquidity > 0, "PrimitiveV2: LIQUIDITY_ZERO");
-        _mint(receiver, liquidity);
+        _mint(receiver, liquidity); // mint liquidity tokens
 
-        _updateCaches(shortBalance, underlyingBalance);
-        emit Mint(msg.sender, shortAmount, underlyingAmount);
+        _updateCaches(shortBalance, underlyingBalance); // store balances in cache
+        emit Mint(_msgSender(), shortAmount, underlyingAmount);
     }
 
     // optimistic pro-rata liquidity token implementation
@@ -145,7 +154,6 @@ contract PrimitiveAmm is PrimitiveERC20, ReentrancyGuard {
         uint256 underlyingBalance =
             IERC20(underlyingToken_).balanceOf(address(this));
         uint256 liquidity = balanceOf[address(this)];
-
         uint256 _totalSupply = totalSupply;
         shortAmount = liquidity.mul(shortBalance) / _totalSupply;
         underlyingAmount = liquidity.mul(underlyingBalance) / _totalSupply;
@@ -160,7 +168,7 @@ contract PrimitiveAmm is PrimitiveERC20, ReentrancyGuard {
         underlyingBalance = IERC20(underlyingToken_).balanceOf(address(this));
 
         _updateCaches(shortBalance, underlyingBalance);
-        emit Burn(msg.sender, shortAmount, underlyingAmount, receiver);
+        emit Burn(_msgSender(), shortAmount, underlyingAmount, receiver);
     }
 
     // sells short for underlying.
@@ -200,7 +208,8 @@ contract PrimitiveAmm is PrimitiveERC20, ReentrancyGuard {
         );
         // update caches
         _updateCaches(shortBalance, underlyingBalance);
-        emit SwapFromShort(msg.sender, amountShortIn, quote, receiver);
+        _updateRate();
+        emit SwapFromShort(_msgSender(), amountShortIn, quote, receiver);
     }
 
     // buys short for underlying
@@ -242,7 +251,8 @@ contract PrimitiveAmm is PrimitiveERC20, ReentrancyGuard {
         );
         // update caches
         _updateCaches(shortBalance, underlyingBalance);
-        emit SwapToShort(msg.sender, amountShortOut, quote, receiver);
+        _updateRate();
+        emit SwapToShort(_msgSender(), amountShortOut, quote, receiver);
     }
 
     // ===== Quotes =====

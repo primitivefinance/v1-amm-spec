@@ -8,8 +8,8 @@ const SCALE = 'gwei'
 const PRECISION = parseUnits('1', SCALE)
 const ACCURACY = 1e-4 // need to analyze further
 const DEFAULT_PARAMS = {
-  scalar: 100,
-  anchor: 1.01e9,
+  scalar: 10,
+  anchor: 1.25e9,
   fee: '0.00025',
 }
 
