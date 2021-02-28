@@ -8,8 +8,8 @@ const SCALE = 'gwei'
 const PRECISION = parseUnits('1', SCALE)
 const ACCURACY = 1e-4 // need to analyze further
 const DEFAULT_PARAMS = {
-  scalar: 100,
-  anchor: 1.01e9,
+  scalar: 10,
+  anchor: 1.25e9,
   fee: '0.00025',
 }
 
@@ -132,9 +132,11 @@ const runTrade = async (initialParams) => {
   const expSpotRate = getSpotRate(expSpotExchangeRate)
   // get the on-chain values
   const proportion = await pool.getProportion()
-  const tradeProportion = await pool.getExecutedProportion(amount, initialParams.isSellingShort)
-  const buyRate = await pool.getExecutedExchangeRate(amount, false)
-  const sellRate = await pool.getExecutedExchangeRate(amount, true)
+  const tradeProportion = initialParams.isSellingShort
+    ? await pool.getShortProportionIn(amount)
+    : await pool.getShortProportionOut(amount)
+  const buyRate = await pool.getExchangeRateOut(amount)
+  const sellRate = await pool.getExchangeRateIn(amount)
   const shortToUnderlying = await pool.getShortToUnderlyingQuote(amount)
   const underlyingToShort = await pool.getUnderlyingToShortQuote(amount)
   const fee = await pool.liquidityFee()

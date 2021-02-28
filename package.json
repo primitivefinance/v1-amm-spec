@@ -12,7 +12,10 @@
     "deployments"
   ],
   "scripts": {
-    "test": "cross-env hardhat test"
+    "test": "cross-env hardhat test",
+    "task:clean": "hardhat clean",
+    "task:compile": "hardhat compile",
+    "compile": "npm-run-all task:clean task:compile"
   },
   "repository": "https://github.com/primitivefinance/primitive-amm.git",
   "author": "Primitive",
@@ -38,5 +41,8 @@
     "rimraf": "^3.0.2",
     "solc": "^0.8.0",
     "solidity-coverage": "^0.7.13"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^3.4.0"
   }
 }
